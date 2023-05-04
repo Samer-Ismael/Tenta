@@ -1,8 +1,6 @@
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-
 
         String[] questions = {
                 "Vad betyder SQL?",
@@ -112,7 +110,7 @@ public class Main {
                         "En SQL-index används för att ändra strukturen på en befintlig tabell."}
         };
 
-        int[] correctAnswers = {1, 1, 1, 2, 2, 1, 4, 3, 1, 1, 1, 1, 4, 1, 2, 1, 3, 1, 3, 1, 1, 1, 2, 1, 1, 4, 2, 1, 2};
+        int[] correctAnswers = {1, 1, 1, 2, 2, 1, 4, 3, 1, 1, 2, 4, 1, 2, 1, 2, 3, 1};
 
         tenta(questions, options, correctAnswers);
     }
@@ -142,10 +140,8 @@ public class Main {
                 System.out.println("Fel svar.\n");
             }
         }
-
         System.out.println("Resultat:");
         System.out.println("Antal frågor: " + numQuestions);
         System.out.println("Antal rätt svar: " + numCorrectAnswers);
     }
-
 }
