@@ -164,22 +164,22 @@ public class Main {
 
     public static void extractQuestionsAndOptions(String text) {
         String[] lines = text.split("\n");
-        List<String[]> questionOptionPairs = new ArrayList<>();
+        List<String[]> questionOption = new ArrayList<>();
 
         for (int i = 0; i < lines.length; i++) {
             String line = lines[i].trim();
             if (!line.endsWith("?") || line.contains("svar") || line.contains("Svar") || line.contains("SVAR")) {
                 String[] options = line.substring(1).trim().split("\n-");
-                questionOptionPairs.add(options);
+                questionOption.add(options);
             }
         }
 
-        String[][] result = new String[questionOptionPairs.size()][];
-        for (int i = 0; i < questionOptionPairs.size(); i++) {
-            result[i] = questionOptionPairs.get(i);
+        String[][] result = new String[questionOption.size()][];
+        for (int i = 0; i < questionOption.size(); i++) {
+            result[i] = questionOption.get(i);
         }
 
-        for (String[] questionOptionPair : questionOptionPairs) {
+        for (String[] questionOptionPair : questionOption) {
             System.out.print("{");
             for (int i = 0; i < questionOptionPair.length; i++) {
                 System.out.print("\"" + questionOptionPair[i] + "\"");
