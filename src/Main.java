@@ -33,84 +33,80 @@ public class Main {
                 "Hur raderar du Cissi från tabellen?",
                 "Hur uppdaterar du Davids ålder till 60?",
                 "Hur sorterar du alla efter ålder i fallande ordning?",
-                "Hur sorterar du alla efter ålder i stigande ordning?"
+                "Hur sorterar du alla efter ålder i stigande ordning?",
+                "Vad är en SQL-Injection",
+                "Vad heter Bobby Tables egentligen?",
+                "Vad händer om man inte använder parametrar i sin SQL kommunikation?",
+                "Vad hände när Bobby Tables skrev in i skolan?",
+                "Vad är lärdomen med Bobby Tables?",
+                "Vad betyder den här koden? strSQL = \"SELECT name, lastName from People where Name = ? AND LastName = ?\"",
+                "Varför är den här koden att föredra? strSQL = \"SELECT name, lastName from People where Name = ? AND LastName = ?\"",
+                "Vad är Brute Force?",
+                "Hur fungerar Brute Force?",
+                "Vad är ett design pattern?",
+                "Vad har man en builder till?",
+                "Vad för annat namn har builder pattern?",
+                "Vad gör Builderns metoder speciella?",
+                "Vad gör metoden Build()?",
+                "Vad är en singleton?",
+                "Vad är en factory?",
+                "Vad gör metoden Build() i en factory?",
+                "Vad är skillnaden mellan factory och builder?"
         };
 
         String[][] options = {
                 {"Structured Query Language", "Structured Question Language", "Structured Query List", "Structured Question List"},
-
-                {"En samling av relaterade data som lagras på ett organiserat sätt för att möjliggöra effektiv hantering och användning av information.",
-                        "En samling av slumpmässigt utvalda data som lagras på ett oorganiserat sätt för att göra det svårare att hitta information.",
-                        "En samling av textdokument som lagras på ett kaotiskt sätt för att göra det enklare att förlora viktig information."},
-
-                {"En relationsdatabas är en typ av databas som organiserar data i tabeller med rader och kolumner, där informationen i varje tabell är relaterad till informationen i en annan tabell genom användning av nycklar.",
-                        "En relationsdatabas är en typ av databas som lagrar data i en oorganiserad struktur och kräver att användare söker manuellt efter informationen de behöver.",
-                        "En relationsdatabas är en typ av databas som använder grafstrukturer för att lagra data och möjliggör snabba sökningar och analyser."},
-
-                {"En sorts stol som används för att sitta vid ett matbord.",
-                        "En plats i databasen med information på ett organiserat sätt, uppdelat rader och kolumner.",
-                        "En sorts medicin som används för att behandla huvudvärk.",
-                        "En sorts bil som tillverkas i Frankrike - Le Tabellé."},
-
-                {"En kolumn som innehåller värden som kan vara dubbletter",
-                        "En kolumn som innehåller unika värden",
-                        "En kolumn som innehåller värden som kan vara null",
-                        "En kolumn som innehåller värden som inte kan vara null"},
-
-                {"En kolumn som innehåller värden som kan vara dubbletter",
-                        "En kolumn som innehåller värden som kan vara null",
-                        "En kolumn som innehåller värden som inte kan vara null",
-                        "En kolumn som innehåller unika värden"},
-
-                {"Dubletter i en SQL-databas är bra eftersom det gör att det finns fler data att arbeta med.",
-                        "Dubletter i en SQL-databas är bra eftersom det gör det enklare att hitta data.",
-                        "Dubletter i en SQL-databas är bra eftersom det gör att databasen är mer robust.",
-                        "Dubletter i en SQL-databas är dåligt eftersom det ökar risken för inkonsekvens och felaktigheter i data."},
-
-                {"En rad som innehåller samma värden som en annan rad",
-                        "En rad som innehåller unika värden",
-                        "En rad som innehåller värden som kan vara null",
-                        "En rad som innehåller värden som inte kan vara null"},
-
-                {"Create, Read, Update, Delete", "Create, Read, Update, Destroy", "Create, Read, Update, Execute", "Create, Read, Update, Modify"},
-
-                {"För att lägga till data i en tabell används SQL-kommandot INSERT INTO.",
-                        "För att uppdatera data i en tabell används SQL-kommandot UPDATE.",
-                        "För att ta bort data från en tabell används SQL-kommandot REMOVE FROM.",
-                        "För att söka efter data i en tabell används SQL-kommandot SEARCH."},
-
-                {"För att skapa en ny tabell används SQL-kommandot CREATE TABLE.",
-                        "För att radera en tabell används SQL-kommandot DELETE TABLE.",
-                        "För att ändra strukturen på en befintlig tabell används SQL-kommandot ALTER TABLE.",
-                        "För att flytta en tabell till en annan databas används SQL-kommandot MOVE TABLE."},
-
-                {"En SQL-fråga för att filtrera rader baserat på ett villkor är SELECT * FROM table WHERE condition;",
-                        "En SQL-fråga för att sortera rader i fallande ordning baserat på en kolumn är SELECT * FROM table ORDER BY column DESC;",
-                        "En SQL-fråga för att välja specifika kolumner från en tabell är SELECT column1, column2 FROM table;",
-                        "En SQL-fråga för att uppdatera värden i en tabell är UPDATE table SET column = value WHERE condition;"},
-
-                {"En SQL-join används för att kombinera rader från två eller flera tabeller baserat på en gemensam kolumn.",
-                        "En SQL-join används för att dela upp en tabell i mindre delar för att förbättra prestanda.",
-                        "En SQL-join används för att ta bort duplicerade rader från en tabell.",
-                        "En SQL-join används för att skapa en ny tabell från två befintliga tabeller."},
-
-                {"En primärnyckel är en unik identifierare för varje rad i en tabell som används för att säkerställa att varje rad kan identifieras entydigt.",
-                        "En primärnyckel är en kolumn som tillåter duplicerade värden i en tabell.",
-                        "En primärnyckel är en kolumn som innehåller null-värden.",
-                        "En primärnyckel är en kolumn som används för att koppla samman två tabeller."},
-
-                {"En främmande nyckel är en kolumn eller en kombination av kolumner i en tabell som används för att skapa en relation mellan två tabeller.",
-                        "En främmande nyckel är en kolumn som tillåter duplicerade värden i en tabell.",
-                        "En främmande nyckel är en kolumn som innehåller null-värden.",
-                        "En främmande nyckel är en kolumn som används för att skapa en unik identifierare för varje rad i en tabell."},
-
-                {"En SQL-index används för att snabba upp sökningar i en tabell genom att skapa en separat datastruktur som innehåller indexet på en eller flera kolumner.",
-                        "En SQL-index används för att kopiera data från en tabell till en annan.",
-                        "En SQL-index används för att ta bort duplicerade rader från en tabell.",
-                        "En SQL-index används för att ändra strukturen på en befintlig tabell."}
+                {"En samling av relaterade data som lagras på ett organiserat sätt för att möjliggöra effektiv hantering och användning av information.", "En samling av slumpmässigt utvalda data som lagras på ett oorganiserat sätt för att göra det svårare att hitta information.", "En samling av textdokument som lagras på ett kaotiskt sätt för att göra det enklare att förlora viktig information."},
+                {"En relationsdatabas är en typ av databas som lagrar data i en oorganiserad struktur och kräver att användare söker manuellt efter informationen de behöver.", "En relationsdatabas är en typ av databas som organiserar data i tabeller med rader och kolumner, där informationen i varje tabell är relaterad till informationen i en annan tabell genom användning av nycklar.", "En relationsdatabas är en typ av databas som inte är kompatibel med andra programvaror och system, vilket gör det svårt att överföra data från en plattform till en annan.", "En relationsdatabas är en typ av databas som bara kan hantera numerisk data och inte kan lagra andra typer av data som text, bilder och ljud."},
+                {"En tabell är en sorts stol som används för att sitta vid ett matbord.", "En tabell är en plats i databasen med information på ett organiserat sätt, uppdelat rader och kolumner.", "En tabell är en sorts medicin som används för att behandla huvudvärk.", "En tabell är en sorts bil som tillverkas i Frankrike - Le Tabellé."},
+                {"En kolumn som innehåller värden som kan vara dubbletter", "En kolumn som innehåller unika värden", "En kolumn som innehåller värden som kan vara null", "En kolumn som innehåller värden som inte kan vara null"},
+                {"En kolumn som innehåller värden som kan vara dubbletter", "En kolumn som innehåller värden som kan vara null", "En kolumn som innehåller värden som inte kan vara null", "En kolumn som innehåller unika värden"},
+                {"Dubletter i en SQL-databas är bra eftersom det gör att det finns fler data att arbeta med.", "Dubletter i en SQL-databas är bra eftersom det gör det enklare att hitta data.", "Dubletter i en SQL-databas är bra eftersom det gör att databasen är mer robust.", "Dubletter i en SQL-databas är dåligt eftersom det ökar risken för inkonsekvens och felaktigheter i data."},
+                {"En rad som innehåller samma värden som en annan rad", "En rad som innehåller unika värden", "En rad som innehålenrvärden som kan vara null", "En rad som innehåller värden som inte kan vara null"},
+                {"Create, Read, Update, Delete", "Create, Read, Update, Destroy", "Create, Read, Upload, Delete", "Create, Read, Upload, Destroy"},
+                {"En sats som skapar en tabell", "En sats som hämtar data från en tabell", "En sats som uppdaterar data i en tabell", "En sats som tar bort data från en tabell"},
+                {"En sats som skapar en tabell", "En sats som läser data från en tabell", "En sats som uppdaterar data i en tabell", "En sats som tar bort data från en tabell", "Svar"},
+                {"En sats som skapar en tabell", "En sats som läser data från en tabell", "En sats som uppdaterar data i en tabell", "En sats som tar bort data från en tabell", "Svar"},
+                {"En sats som skapar en tabell", "En sats som läser data från en tabell", "En sats som uppdaterar data i en tabell", "En sats som tar bort data från en tabell", "Svar"},
+                {"En sats som skapar en tabell", "En sats som läser data från en tabell", "En sats som uppdaterar data i en tabell", "En sats som tar bort data från en tabell", "Svar"},
+                {"En sats som skapar en tabell", "En sats som läser data från en tabell", "En sats som uppdaterar data i en tabell", "En sats som tar bort data från en tabell", "Svar"},
+                {"En sats som skapar en tabell", "En sats som läser data från en tabell", "En sats som uppdaterar data i en tabell", "En sats som tar bort data från en tabell", "Svar"},
+                {"Den kombinerar data från två tabeller", "Den kombinerar data från två tabeller och tar bort dubbletter", "Den kombinerar data från två tabeller och tar bort rader som inte matchar i den första tabellen", "Den kombinerar data från två tabeller och tar bort rader som inte matchar och dubbletter", "Svar"},
+                {"Den kombinerar data från två tabeller", "Den kombinerar data från två tabeller och tar bort dubbletter", "Den kombinerar data från två tabeller och tar bort rader som inte matchar i den båda tabellerna", "Den kombinerar data från två tabeller och tar bort rader som inte matchar och dubbletter", "Svar"},
+                {"Den kombinerar data från två tabeller", "Den kombinerar data från två tabeller och tar bort dubbletter", "Den kombinerar data från två tabeller och tar bort rader som inte matchar i den andra tabellen", "Den kombinerar data från två tabeller och tar bort rader som inte matchar och dubbletter", "Svar"},
+                {"Den kombinerar data från två tabeller", "Den kombinerar data från två tabeller och tar bort dubbletter", "En FULL OUTER JOIN-sats i SQL kombinerar rader från två eller flera tabeller, inklusive rader som inte matchar i båda tabellerna.", "Den kombinerar data från två tabeller och tar bort rader som inte matchar och dubbletter", "Svar"},
+                {"En sats som grupperar data från en tabell", "Svar"},
+                {"CREATE DATABASE personer;", "CREATE TABLE personer;", "CREATE TABLE personer (Namn, Ålder, Stad);", "CREATE TABLE personer (Namn VARCHAR(255), Ålder INT, Stad VARCHAR(255));", "Svar"},
+                {"CREATE TABLE personer;", "CREATE TABLE personer (Namn, Ålder, Stad);", "CREATE TABLE personer (Namn VARCHAR(255), Ålder INT, Stad VARCHAR(255));", "CREATE TABLE personer (Namn VARCHAR(255), Ålder INT, Stad VARCHAR(255), PRIMARY KEY (Namn));", "Svar"},
+                {"INSERT INTO personer (Namn, Ålder, Stad) VALUES ('Adam', 20, 'Lund');", "INSERT INTO personer (Namn, Ålder, Stad) VALUES ('Bert', 'Lund', 30);", "INSERT INTO personer (Namn, Ålder, Stad) VALUES (40, 'Cissi', 'Lund');", "INSERT INTO personer (Namn, Ålder, Stad) VALUES ('David', 50, 'Lund');", "Svar"},
+                {"SELECT * FROM personer;", "SELECT * FROM personer WHERE Namn = 'Adam';", "SELECT * FROM personer WHERE Namn = 'Adam' AND Ålder = 20;", "SELECT * FROM personer WHERE Namn = 'Adam' OR Ålder = 20;", "Svar"},
+                {"SELECT * FROM personer;", "SELECT * FROM personer WHERE Namn = 'Adam';", "SELECT * FROM personer WHERE Namn = 'Adam' AND Ålder = 20;", "SELECT * FROM personer WHERE Namn = 'Adam' OR Ålder = 20;", "Svar"},
+                {"SELECT * FROM personer;", "SELECT * FROM personer WHERE Namn = 'Adam';", "SELECT * FROM personer WHERE Namn = 'Adam' AND Ålder = 20;", "SELECT * FROM personer WHERE Namn = 'Adam' OR Ålder = 20;", "Svar"},
+                {"Delete FROM personer WHERE Namn != 'Cissi';", "Delete FROM personer WHERE Namn = 'Cissi';", "Delete FROM personer WHERE Namn = 'Cissi' AND Ålder = 40;", "Delete FROM personer WHERE Namn = 'Cissi' OR Ålder = 40;", "Svar"},
+                {"UPDATE personer SET Ålder = 60 WHERE Namn = 'David';", "UPDATE personer SET Ålder = 60 WHERE Ålder = 50;", "UPDATE personer SET Ålder = 60 WHERE Namn = 'David' AND Ålder = 50;", "UPDATE personer SET Ålder = 60 WHERE Namn = 'David' OR Ålder = 50;", "Svar"},
+                {"SELECT * FROM personer ORDER BY Ålder DESC;", "SELECT * FROM personer ORDER BY Ålder ASC;", "SELECT * FROM personer ORDER BY Ålder;", "SELECT * FROM personer ORDER BY Ålder DESC LIMIT 1;", "Svar"},
+                {"SELECT * FROM personer ORDER BY Ålder DESC;", "SELECT * FROM personer ORDER BY Ålder ASC;", "SELECT * FROM personer ORDER BY Ålder;", "SELECT * FROM personer ORDER BY Ålder DESC LIMIT 1;", "Svar"},
+                {"Skydd för databasen", "Vaccination mot virus", "Vaccin för att sluta tänka på SQL", "Skadlig SQL-kod som körs i databasen"},
+                {"Robert Tables", "Robert'); DROP TABLE personer; --", "Robert'); DROP TABLE students; --", "Robert'); DROP TABLE people; --"},
+                {"Inget speciellt", "SQL-Injection och Marcus ger dig IG!", "Parametrar behövs bara om man ska skriva till databasen", "Parametrar är onödig extra kod"},
+                {"Skolans studenttabell blev raderad", "Skolan blev vaccinerad mot SQL-Injection", "Skolan blev vaccinerad mot SQL-Injection och Bobby fick IG", "Skolan blev vaccinerad"},
+                {"Använd parametrar", "Använd inte parametrar", "Använd Bobby Tables", "Använd inte Bobby Tables"},
+                {"Hämta alla namn och efternamn från tabellen People", "Hämta alla namn och efternamn från tabellen People där namnet är lika med efternamnet", "Hämta alla namn och efternamn från tabellen People där namnet och efternamnet är lika med de parameter som skickas in", "Hämta alla namn och efternamn från tabellen People där namnet och efternamnet är bokstavligt talat frågotecken"},
+                {"Den är inte att föredra", "Den är att föredra för att den är enklare att läsa", "Den är att föredra för att den är enklare att skriva", "Den är att föredra för att den är säkrare"},
+                {"En metod för att visa lösenord", "En metod för att knäcka nötter", "En metod för att knäcka koder genom att testa alla möjliga kombinationer", "En metod för att göra knäck vid jul"},
+                {"Den skickar en stor mängd oönskad trafik till nätverksresursen. Attacken syftar till att göra den målstyrda resursen otillgänglig för sina avsedda användare genom att överbelasta dess kapacitet.", "Den sticker en kniv i ryggen på Caesar - Et tu, Brute?", "Den testar alla möjliga kombinationer av tecken tills den hittar rätt", "Den testar alla möjliga kombinationer av glass tills den hittar den godaste"},
+                {"En lösning på ett vanligt problem", "En lösning på ett specifikt problem", "En lösning på ett problem som kan användas i flera olika situationer", "En lösning på ett problem som kan användas i flera olika situationer och som är dokumenterad"},
+                {"Att bygga kod åt oss (som Copilot)", "Att generera alla parametrar till constructorn och skapa objektet", "Att generera olika objekt med olika parametrar", "Att generera olika parametrar"},
+                {"Factory pattern", "Fluent pattern", "Fluent builder pattern", "Factory builder pattern"},
+                {"De returnerar this", "De returnerar en ny instans av en annan klass", "De returnerar en gammal instans av en annan klass", "De returnerar en ny instans av en annan klass som ärver från den första klassen"},
+                {"Den returnerar this", "Den returnerar en ny instans av en annan klass", "Den returnerar en gammal instans av en annan klass", "Den returnerar en ny instans av en annan klass som ärver från den första klassen"},
+                {"En klass som bara kan instansieras en gång", "En klass som bara kan instansieras en gång och som har en statisk metod som returnerar instansen", "En klass som bara kan instansieras en gång och som har en statisk metod som returnerar instansen och som har en privat konstruktor", "En klass som bara kan instansieras en gång och som har en statisk metod som returnerar instansen och som har en privat konstruktor och som har en privat statisk instans"},
+                {"En klass som skapar andra klasser", "En klass som skapar andra klasser och som har en statisk metod som returnerar instansen", "En klass som skapar andra klasser och som har en statisk metod som returnerar instansen och som har en privat konstruktor", "En klass som skapar andra klasser och som har en statisk metod som returnerar instansen och som har en privat konstruktor och som har en privat statisk instans"},
+                {"Den returnerar this", "Den returnerar en ny instans av en annan klass", "Den returnerar en gammal instans av en annan klass", "Den returnerar en ny instans av en annan klass som ärver från den första klassen"},
+                {"Factory skapar objekt, builder bygger objekt", "Factory skapar objekt, builder bygger objekt och factory har en statisk metod som returnerar instansen", "Factory skapar objekt, builder bygger objekt och builder har en statisk metod som returnerar instansen", "Factory skapar objekt, builder bygger objekt och factory har en statisk metod som returnerar instansen och builder har en statisk metod som returnerar instansen"}
         };
 
-        int[] correctAnswers = {1, 1, 1, 2, 2, 1, 4, 3, 1, 1, 2, 4, 1, 2, 1, 2, 3, 1};
+        int[] correctAnswers = {1, 1, 2, 2, 4, 1, 3, 3, 1, 2, 1, 3, 4, 2, 2, 1, 4, 3, 3, 3, 5, 4, 4, 1, 2, 2, 2, 1, 2, 3 ,4, 3, 2, 1, 1, 4, 4, 3, 3, 2, 3, 2, 2, 1, 2, 2};
 
         tenta(questions, options, correctAnswers);
     }
