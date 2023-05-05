@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -106,7 +108,11 @@ public class Main {
                 {"Factory skapar objekt, builder bygger objekt", "Factory skapar objekt, builder bygger objekt och factory har en statisk metod som returnerar instansen", "Factory skapar objekt, builder bygger objekt och builder har en statisk metod som returnerar instansen", "Factory skapar objekt, builder bygger objekt och factory har en statisk metod som returnerar instansen och builder har en statisk metod som returnerar instansen"}
         };
 
-        int[] correctAnswers = {1, 1, 2, 2, 4, 1, 3, 3, 1, 2, 1, 3, 4, 2, 2, 1, 4, 3, 3, 3, 5, 4, 4, 1, 2, 2, 2, 1, 2, 3 ,4, 3, 2, 1, 1, 4, 4, 3, 3, 2, 3, 2, 2, 1, 2, 2};
+        int[] correctAnswers = {1, 1, 2, 2, 4, 1, 3, 3, 1, 2, 1, 3, 4, 2, 2, 1, 4, 3, 3, 3, 5, 4, 4, 1, 2, 2, 2, 1, 2, 3, 4, 3, 2, 1, 1, 4, 4, 3, 3, 2, 3, 2, 2, 1, 2, 2};
+
+        String text = "";
+        //extractQuestionsAndOptions(text);
+        //questionMaker(text);
 
         tenta(questions, options, correctAnswers);
     }
@@ -139,5 +145,49 @@ public class Main {
         System.out.println("Resultat:");
         System.out.println("Antal frågor: " + numQuestions);
         System.out.println("Antal rätt svar: " + numCorrectAnswers);
+    }
+
+    public static void questionMaker(String text) {
+
+        List<String> questions = new ArrayList<>();
+        String[] lins = text.split("\n");
+        for (String lin : lins) {
+
+            if (lin.endsWith("?")) {
+                questions.add(lin);
+            }
+        }
+        for (String question : questions) {
+            System.out.println("\"" + question + "\"");
+        }
+    }
+
+    public static void extractQuestionsAndOptions(String text) {
+        String[] lines = text.split("\n");
+        List<String[]> questionOptionPairs = new ArrayList<>();
+
+        for (int i = 0; i < lines.length; i++) {
+            String line = lines[i].trim();
+            if (!line.endsWith("?") || line.contains("svar") || line.contains("Svar") || line.contains("SVAR")) {
+                String[] options = line.substring(1).trim().split("\n-");
+                questionOptionPairs.add(options);
+            }
+        }
+
+        String[][] result = new String[questionOptionPairs.size()][];
+        for (int i = 0; i < questionOptionPairs.size(); i++) {
+            result[i] = questionOptionPairs.get(i);
+        }
+
+        for (String[] questionOptionPair : questionOptionPairs) {
+            System.out.print("{");
+            for (int i = 0; i < questionOptionPair.length; i++) {
+                System.out.print("\"" + questionOptionPair[i] + "\"");
+                if (i < questionOptionPair.length - 1) {
+                    System.out.print(", ");
+                }
+            }
+            System.out.println("}");
+        }
     }
 }
