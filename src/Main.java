@@ -162,13 +162,13 @@ public class Main {
         }
     }
 
-    public static void extractQuestionsAndOptions(String text) {
+    public static void OptionsMaker (String text) {
         String[] lines = text.split("\n");
         List<String[]> questionOption = new ArrayList<>();
 
         for (int i = 0; i < lines.length; i++) {
             String line = lines[i].trim();
-            if (!line.endsWith("?") || line.contains("svar") || line.contains("Svar") || line.contains("SVAR")) {
+            if (line.endsWith(".") || line.startsWith("Svar")) {
                 String[] options = line.substring(1).trim().split("\n-");
                 questionOption.add(options);
             }
@@ -190,4 +190,11 @@ public class Main {
             System.out.println("}");
         }
     }
+    /*
+
+
+
+
+
+     */
 }
